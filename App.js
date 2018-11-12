@@ -65,18 +65,25 @@ class ducanh extends abc  {
     
 }
 
-class TestState extends React.Component {
-    constructor(props) {
+class TestState extends React.Component{
+    constructor(props){
         super(props);
-        this.state = {value: 'tran duc anh'}
+        this.state = {value: 'tran duc anh'};
+        this.state = {number: 0};
     }
-    handleChange(e) {
-        this.setState({ value: e.target.value });
+    handleChange(e){
+        this.setState({value: e.target.value });
     }
-    clickAlert() {
+    clickAlert(){
         alert(this.state.value);
     }
-    render() {
+    increaseValue(){
+        this.setState({number: this.state.number  + 1})
+    }
+    decreaseValue(){
+        this.setState({number: this.state.number - 1})
+    }
+    render(){
         return (
             <React.Fragment>
                 <span>{this.state.value}</span>
@@ -87,6 +94,11 @@ class TestState extends React.Component {
                 <button onClick={this.clickAlert.bind(this)}>
                     Click Here
                 </button>
+                <br />
+                <br />
+                <button onClick={this.decreaseValue.bind(this)}>-</button>
+                <input value = {this.state.number}/>
+                <button onClick={this.increaseValue.bind(this)}>+</button>
             </React.Fragment>
         );
     }
