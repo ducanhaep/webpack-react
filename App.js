@@ -2,6 +2,8 @@ import React, { Fragment } from "react";
 import ReactDOM from "react-dom";
 // import Box from "./src/components/navbar";
 import AA from "./testxexport";
+import listandkey from "./src/test/listandkey"
+import ListAndKey from "./src/test/listandkey";
 class Lopne extends React.Component {
     render() {
         return <h1>He Nho tao la Lopne</h1>;
@@ -273,6 +275,9 @@ class Stateoutside extends React.Component {
     }
 }
 /////////////////////////////////////////////////////////////////////////////////
+
+
+
 class RenderEveryThing extends React.Component {
     render() {
         return (
@@ -292,6 +297,7 @@ class RenderEveryThing extends React.Component {
                 <br />
                 <br />
                 <Stateoutside />
+                <ListAndKey />
             </React.Fragment>
         );
     }
