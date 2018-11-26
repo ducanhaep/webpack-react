@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { number } from 'prop-types';
 
 // const numbers = [1,2,3,4,5];
@@ -37,41 +37,79 @@ function NumberList(props) {
 
 
 class Blogs extends Component {
-    sidebar() {
-        return (
+    // sidebar() {
+    //     <ul>
+    //         {this.props.posts.map((post) =>
+    //             <li key={post.id}>
+    //                 {post.title}
+    //             </li>
+    //         )}
+    //     </ul>
+    // }
+    // content() {
+    //     this.props.posts.map((post) =>
+    //         <div key={post.id}>
+    //             <h3>{post.title}</h3>
+    //             <p>{post.content}</p>
+    //         </div>
+    //     )
+    // }
+    render() {
+        var sidebar = (
             <ul>
-                {this.props.posts.map((post) =>
-                    <li key={post.id}>
+                {this.props.posts.map((post) => (
+                    <li key= {post.id}>
                         {post.title}
                     </li>
-                )}
+                ))}
             </ul>
-        )
-    }
-    content() {
-        return (
-            this.props.posts.map((post) =>
-                <div key={post.id}>
-                    <h3>{post.title}</h3>
-                    <p>{post.content}</p>
-                </div>
-            )
-        )
-    }
-    render() {
+        );
+        var content = this.props.posts.map((post) => (
+            <div key={post.id}>
+                <h3>{post.title}</h3>
+                <p>{post.content}</p>
+            </div>
+        ))
+            
+
         return (
             <div>
-                {this.sidebar.bind(this)}
+                {sidebar}
                 <hr />
-                {this.content.bind(this)}
+                {content}
             </div>
         )
     }
 }
+// function Blogs(props) {
+//     const sidebar = (
+//       <ul>
+//         {props.posts.map((post) =>
+//           <li key={post.id}>
+//             {post.title}
+//           </li>
+//         )}
+//       </ul>
+//     );
+//     const content = props.posts.map((post) =>
+//       <div key={post.id}>
+//         <h3>{post.title}</h3>
+//         <p>{post.content}</p>
+//       </div>
+//     );
+//     return (
+//       <div>
+//         {sidebar}
+//         <hr />
+//         {content}
+//       </div>
+//     );
+//   }
 
 const posts = [
   {id: 1, title: 'Hello World', content: 'Welcome to learning React!'},
-  {id: 2, title: 'Installation', content: 'You can install React from npm.'}
+  {id: 2, title: 'Installation', content: 'You can install React from npm.'},
+  {id: 3, title: 'Installation3', content: 'You can install React from npm.3'}
 ];
 
 var numbers = [2,3,4,6,7,8,2,1]
