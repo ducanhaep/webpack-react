@@ -4,8 +4,8 @@ class Form extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            value: '',
-            valuetextarea: '',
+            value: 'input ne',
+            valuetextarea: 'text area ne',
             valueselect: 'coconut'
         };
         this.handleChange = this.handleChange.bind(this);
