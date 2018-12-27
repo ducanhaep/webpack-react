@@ -4,6 +4,10 @@ import ReactDOM from "react-dom";
 import AA from "./testxexport";
 import ListAndKey from "./src/test/listandkey";
 import Form from "./src/test/form";
+// import Ref from './src/test/Ref';
+var Ref = require('./src/test/Ref').cc;
+import ClassAndFucntionalCp from './src/test/ClassAndFunctionalCp';
+import TestState from './src/test/StateTech';
 class Lopne extends React.Component {
     render() {
         return <h1>He Nho tao la Lopne</h1>;
@@ -68,46 +72,46 @@ class ducanh extends abc  {
 }
 
 
-class TestState extends React.Component{
-    constructor(props){
-        super(props);
-        this.state = {value: 'tran duc anh'};
-        this.state = {number: 0};
-        // this.handleChange = this.handleChange.bind(this)
-    }
-    handleChange(e) {
-        this.setState({value: e.target.value });
-    }
-    clickAlert(){
-        alert(this.state.value);
-    }
-    increaseValue(){
-        this.setState({number: this.state.number  + 1})
-    }
-    decreaseValue(){
-        this.setState({number: this.state.number - 1})
-    }
-    render(){
-        return (
-            <React.Fragment>
-                <span>{this.state.value}</span>
-                <br />
-                <input
-                    onChange={(e) => this.handleChange(e)}
-                />
-                <button onClick={this.clickAlert.bind(this)}>
-                    Click Here
-                </button>
-                <br />
-                <br />
-                <button onClick={this.decreaseValue.bind(this)}>-</button>
-                <input value = {this.state.number}/>
-                <button onClick={this.increaseValue.bind(this)}>+</button>
-                <AA />
-            </React.Fragment>
-        );
-    }
-}
+// class TestState extends React.Component{
+//     constructor(props){
+//         super(props);
+//         this.state = {value: 'tran duc anh'};
+//         this.state = {number: 0};
+//         // this.handleChange = this.handleChange.bind(this)
+//     }
+//     handleChange(e) {
+//         this.setState({value: e.target.value });
+//     }
+//     clickAlert(){
+//         alert(this.state.value);
+//     }
+//     increaseValue(){
+//         this.setState({number: this.state.number  + 1})
+//     }
+//     decreaseValue(){
+//         this.setState({number: this.state.number - 1})
+//     }
+//     render(){
+//         return (
+//             <React.Fragment>
+//                 <span>{this.state.value}</span>
+//                 <br />
+//                 <input
+//                     onChange={(e) => this.handleChange(e)}
+//                 />
+//                 <button onClick={this.clickAlert.bind(this)}>
+//                     Click Here
+//                 </button>
+//                 <br />
+//                 <br />
+//                 <button onClick={this.decreaseValue.bind(this)}>-</button>
+//                 <input value = {this.state.number}/>
+//                 <button onClick={this.increaseValue.bind(this)}>+</button>
+//                 <AA />
+//             </React.Fragment>
+//         );
+//     }
+// }
 // const element2 = (
 //     <React.Fragment>
 //         <Testprop1 name="Mytour.vn"/>
@@ -279,10 +283,30 @@ class Stateoutside extends React.Component {
 
 
 class RenderEveryThing extends React.Component {
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    //         users: [
+    //                 {name: "John", age: 20},
+    //                 {name: "Peter", age: 30},
+    //                 {name: "Anne", age: 40},
+    //             ],
+    //         title: "All User",
+    //     };
+    //     this.handleYounger = this.handleYounger.bind(this);
+    // }
+    // handleYounger() {
+    //     const user = this.state.users.map(function(item){
+    //         const userAge = item.age -= 10;
+    //         return userAge;
+    //     })
+    //     this.setState(user);
+    //     console.log(this.state.users);
+    // }
     render() {
         return (
             <React.Fragment>
-                <Testprop1 name="Mytour.vn" />
+                {/* <Testprop1 name="Mytour.vn" />
                 <Testprop1>
                     eheheheheheheh
                 </Testprop1>
@@ -299,6 +323,19 @@ class RenderEveryThing extends React.Component {
                 <Stateoutside />
                 <ListAndKey />
                 <Form />
+                <br />
+                <br />
+                <br />
+                <Ref />
+                <h2>{this.state.title}</h2>
+                <br />
+                <button onClick={this.handleYounger}>Make Us 10 Years Younger</button>
+                <br />
+                {this.state.users.map(item => (
+                    <ClassAndFucntionalCp age={item.age}> {item.name} </ClassAndFucntionalCp>
+                ))} */}
+
+                <TestState />
             </React.Fragment>
         );
     }
