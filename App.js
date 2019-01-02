@@ -5,7 +5,7 @@ import AA from "./testxexport";
 import ListAndKey from "./src/test/listandkey";
 import Form from "./src/test/form";
 // import Ref from './src/test/Ref';
-var Ref = require('./src/test/Ref').cc;
+// var Ref = require('./src/test/Ref').cc;
 import ClassAndFucntionalCp from './src/test/ClassAndFunctionalCp';
 import TestState from './src/test/StateTech';
 class Lopne extends React.Component {

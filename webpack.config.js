@@ -19,6 +19,7 @@ module.exports = {
         use: {
           loader: 'babel-loader',
         }
+        
       }
     ]
   },
@@ -35,6 +36,6 @@ module.exports = {
       title: 'DucAnh',
       template: './src/templates/index.html',
       filename: 'index.html'
-    })
+    }),
   ]
 };
